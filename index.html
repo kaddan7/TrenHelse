@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrenHelse – Statisk</title>
+  <style>
+    :root { --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --brand:#e11d48; --line:#e2e8f0; }
+    *{box-sizing:border-box} html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:linear-gradient(#fff, var(--bg))}
+    a{color:inherit;text-decoration:none} .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid var(--line);z-index:50}
+    nav{display:flex;gap:20px;font-size:14px} .brand{font-weight:800;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)} .btn.ghost{border:none;color:var(--muted);background:transparent}
+    .hero{padding:64px 0} .title{font-size:40px;line-height:1.1;margin:0} .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px} .g2{grid-template-columns:1fr} .g3{grid-template-columns:1fr} @media(min-width:800px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.04)}
+    .card h3{margin:0 0 8px 0;font-size:18px} .card .content{padding:16px} .card .header{padding:14px 16px;border-bottom:1px solid var(--line);font-weight:700;display:flex;align-items:center;justify-content:space-between}
+    .badges{display:flex;flex-wrap:wrap;gap:8px} .badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:4px 8px;background:#fff}
+    .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .input{padding:10px 12px;border:1px solid var(--line);border-radius:10px;width:100%;background:#fff}
+    .list{margin:0;padding-left:18px} .list li{margin:6px 0}
+    footer{border-top:1px solid var(--line);margin-top:40px} footer .inner{padding:24px 0;color:var(--muted);font-size:14px}
+    .underline{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+      <a class="brand" href="#">❤️‍🔥 TrenHelse</a>
+      <nav>
+        <a href="#programmer">Programmer</a>
+        <a href="#ovelser">Øvelsesbank</a>
+        <a href="#planlegger">Planlegger</a>
+        <a href="#ressurser">Ressurser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero grid g2" id="home">
+      <div>
+        <h1 class="title">Smarte økter for <span style="color:var(--brand)">styrke</span>, <span style="color:var(--brand)">mobilitet</span> og <span style="color:var(--brand)">utholdenhet</span></h1>
+        <p class="muted" style="margin-top:10px">Bruk ferdige opplegg eller bygg din egen økt fra øvelsesbanken. Ingen innlogging. Ingen personlig info.</p>
+        <div class="row" style="margin-top:16px">
+          <a class="btn primary" href="#programmer">Se programmer</a>
+          <a class="btn" href="#ovelser">Utforsk øvelser</a>
+        </div>
+        <div class="badges" style="margin-top:16px">
+          <span class="badge">Gratis demo</span>
+          <span class="badge">Fungerer offline</span>
+          <span class="badge">Enkel å tilpasse</span>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="header">Hurtigstart <span class="badge">Tips</span></div>
+          <div class="content muted">
+            <ul class="list">
+              <li>Velg et ferdig program og trykk start (bruk egen timer)</li>
+              <li>Filtrer øvelser på nivå, kategori og utstyr</li>
+              <li>Bygg din egen økt – lagre notater lokalt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programmer -->
+    <section id="programmer" style="padding:28px 0">
+      <h2 style="margin:0 0 12px 0">Ferdige programmer</h2>
+      <div class="grid g3">
+        <div class="card">
+          <div class="header">45 min skadeforebygging <span class="badge">Nybegynner</span></div>
+          <div class="content muted">
+            <div class="badges" style="margin-bottom:8px"><span class="badge">Kjerne</span><span class="badge">Mobilitet</span></div>
+            <ul class="list">
+              <li><b>Oppvarming (8m):</b> T-spine rotasjon, Ankelmobilitet, Lett dynamisk</li>
+              <li><b>Styrke (25m):</b> Glute bridge, Dead bug, Sideplanke, Hip hinge m/strikk</li>
+              <li><b>Avslutning (12m):</b> Mobilitet + pust</li>
+            </ul>
+            <div class="row" style="margin-top:10px"><button class="btn">Start program</button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="header">15 min mobilitet – helkropp <span class="badge">Nybegynner</span></div>
+          <div class="content muted">
+            <ul class="list">
+              <li><b>Flyt (15m):</b> Ankelmobilitet, T-spine, Hofteåpner</li>
+            </ul>
+            <div class="row" style="margin-top:10px"><button class="btn">Start program</button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="header">20 min HIIT – sykkel <span class="badge">Middels</span></div>
+          <div class="content muted">
+            <ul class="list">
+              <li><b>Progresjon (20m):</b> 5 min rolig, 10×(30s hardt/30s lett), 5 min av</li>
+            </ul>
+            <div class="row" style="margin-top:10px"><button class="btn">Start program</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Øvelsesbank -->
+    <section id="ovelser" style="padding:28px 0">
+      <h2 style="margin:0 0 12px 0">Øvelsesbank</h2>
+      <div class="grid g3" style="margin-bottom:12px">
+        <input class="input" id="q" placeholder="Søk på navn/kroppsdel (f.eks. kjerne)">
+        <div class="row">
+          <button class="btn" data-cat>Styrke</button>
+          <button class="btn" data-cat>Mobilitet</button>
+          <button class="btn" data-cat>Utholdenhet</button>
+          <button class="btn" data-cat>Skadeforebygging</button>
+        </div>
+        <div class="row">
+          <button class="btn" data-lvl>Nybegynner</button>
+          <button class="btn" data-lvl>Middels</button>
+          <button class="btn" data-lvl>Viderekommende</button>
+          <button class="btn ghost underline" id="reset">Nullstill filtre</button>
+        </div>
+      </div>
+      <div class="muted" id="count" style="margin-bottom:12px">0 øvelser</div>
+      <div class="grid g3" id="exercise-list"></div>
+    </section>
+
+    <!-- Planlegger -->
+    <section id="planlegger" style="padding:28px 0">
+      <h2 style="margin:0 0 12px 0">Planlegger</h2>
+      <div class="grid g2">
+        <div class="card">
+          <div class="header">Valgte øvelser <span class="badge" id="sel-count">0</span></div>
+          <div class="content">
+            <ul class="list muted" id="selected"></ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="header">Notater</div>
+          <div class="content">
+            <textarea id="notes" class="input" rows="8" placeholder="Skriv oppsett, RPE, tidsbruk eller progresjon… (lagres i nettleseren)"></textarea>
+            <div class="row" style="margin-top:8px">
+              <button class="btn" id="save-notes">Lagre</button>
+              <button class="btn" id="load-notes">Hent lagret</button>
+              <button class="btn ghost" id="clear-notes">Tøm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ressurser -->
+    <section id="ressurser" style="padding:28px 0">
+      <h2 style="margin:0 0 12px 0">Ressurser</h2>
+      <div class="grid g3">
+        <div class="card"><div class="header">Skadeforebygging i sykling</div><div class="content muted"><p>Fokus på kjerne, hofte og mobilitet for å forebygge overbelastning.</p><a class="btn" href="#">Les mer</a></div></div>
+        <div class="card"><div class="header">Basistrening: styrke + mobilitet</div><div class="content muted"><p>Kombiner grunnstyrke med bevegelighet hjemme uten mye utstyr.</p><a class="btn" href="#">Les mer</a></div></div>
+        <div class="card"><div class="header">Utholdenhet: intervaller</div><div class="content muted"><p>Oversikt over korte/lange intervaller og enkel progresjon.</p><a class="btn" href="#">Les mer</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container inner">© <span id="year"></span> TrenHelse • Personvern • Retningslinjer</div>
+  </footer>
+
+<script>
+  const EXERCISES = [
+    { id:"glute_bridge", name:"Glute bridge", category:"Skadeforebygging", level:"Nybegynner", body:"Sete/Hofte", equipment:"Matte", cues:["Press gjennom hælene","Hold kjernen aktiv"], time:"3 x 12" },
+    { id:"dead_bug", name:"Dead bug", category:"Skadeforebygging", level:"Nybegynner", body:"Kjerne", equipment:"Matte", cues:["Lav rygg i gulvet","Rolig tempo"], time:"3 x 8 per side" },
+    { id:"side_plank", name:"Sideplanke", category:"Skadeforebygging", level:"Middels", body:"Kjerne", equipment:"Matte", cues:["Hofter opp","Nakke nøytral"], time:"3 x 30s per side" },
+    { id:"hip_hinge", name:"Hip hinge m/strikk", category:"Styrke", level:"Middels", body:"Bakside lår/rygg", equipment:"Strikk", cues:["Hoftebakover","Rett rygg"], time:"3 x 10" },
+    { id:"tspine", name:"T-spine rotasjon", category:"Mobilitet", level:"Nybegynner", body:"Brystrygg", equipment:"Matte", cues:["Rolig pust","Åpne brystet"], time:"2 x 6 per side" },
+    { id:"ankle_mob", name:"Ankelmobilitet vegg", category:"Mobilitet", level:"Nybegynner", body:"Ankel", equipment:"Ingen", cues:["Kne frem uten hælløft"], time:"2 x 8 per side" },
+    { id:"hiit_bike", name:"HIIT sykkel intervaller", category:"Utholdenhet", level:"Middels", body:"Helkropp", equipment:"Sykkel", cues:["Høy kadens","Kontrollert pust"], time:"10 x 30/30s" },
+  ];
+
+  const state = { q:"", cat:null, lvl:null, selected:[] };
+
+  const els = {
+    year: document.getElementById('year'),
+    q: document.getElementById('q'),
+    reset: document.getElementById('reset'),
+    list: document.getElementById('exercise-list'),
+    count: document.getElementById('count'),
+    selList: document.getElementById('selected'),
+    selCount: document.getElementById('sel-count'),
+    notes: document.getElementById('notes'),
+    saveNotes: document.getElementById('save-notes'),
+    loadNotes: document.getElementById('load-notes'),
+    clearNotes: document.getElementById('clear-notes'),
+  };
+
+  els.year.textContent = new Date().getFullYear();
+
+  function renderExercises(){
+    const filtered = EXERCISES.filter(e=>{
+      const mq = state.q ? (e.name+" "+e.body).toLowerCase().includes(state.q.toLowerCase()) : true;
+      const mc = state.cat ? e.category===state.cat : true;
+      const ml = state.lvl ? e.level===state.lvl : true;
+      return mq && mc && ml;
+    });
+    els.count.textContent = filtered.length + ' øvelser';
+    els.list.innerHTML = '';
+    for(const e of filtered){
+      const c = document.createElement('div'); c.className='card';
+      c.innerHTML = `
+        <div class="header">${e.name} <span class="badge">${e.level}</span></div>
+        <div class="content muted">
+          <p><b>Kategori:</b> ${e.category} · <b>Kroppsdel:</b> ${e.body} · <b>Utstyr:</b> ${e.equipment}</p>
+          <p><b>Dosering:</b> ${e.time}</p>
+          <ul class="list">${e.cues.map(x=>`<li>${x}</li>`).join('')}</ul>
+          <div class="row" style="margin-top:8px">
+            <button class="btn ${state.selected.includes(e.id)?'primary':''}" data-add="${e.id}">${state.selected.includes(e.id)?'Lagt til i økt':'Legg til i økt'}</button>
+          </div>
+        </div>`;
+      els.list.appendChild(c);
+    }
+  }
+
+  function renderSelected(){
+    els.selCount.textContent = state.selected.length;
+    els.selList.innerHTML = state.selected.map(id=>{
+      const e = EXERCISES.find(x=>x.id===id);
+      return `<li>${e.name} – <span class="muted">${e.time}</span> <a href="#" data-rem="${id}" class="underline">fjern</a></li>`;
+    }).join('');
+  }
+
+  // Listeners
+  els.q.addEventListener('input', e=>{ state.q = e.target.value; renderExercises(); });
+  document.addEventListener('click', e=>{
+    const t = e.target;
+    if(t.matches('[data-cat]')) { state.cat = t.textContent.trim(); renderExercises(); }
+    if(t.matches('[data-lvl]')) { state.lvl = t.textContent.trim(); renderExercises(); }
+    if(t.matches('#reset')) { state.q=''; els.q.value=''; state.cat=null; state.lvl=null; renderExercises(); }
+    if(t.matches('[data-add]')) { const id=t.getAttribute('data-add'); if(!state.selected.includes(id)) state.selected.push(id); renderExercises(); renderSelected(); }
+    if(t.matches('[data-rem]')) { e.preventDefault(); const id=t.getAttribute('data-rem'); state.selected = state.selected.filter(x=>x!==id); renderExercises(); renderSelected(); }
+  });
+
+  // Notes localStorage
+  els.saveNotes.addEventListener('click', ()=>{ localStorage.setItem('notes_trenhelse', els.notes.value); alert('Notat lagret 🔒'); });
+  els.loadNotes.addEventListener('click', ()=>{ els.notes.value = localStorage.getItem('notes_trenhelse')||''; });
+  els.clearNotes.addEventListener('click', ()=>{ els.notes.value=''; });
+
+  renderExercises(); renderSelected();
+</script>
+</body>
+</html>
